@@ -95,12 +95,7 @@ Modern TensorFlow's `tf.keras` points to Keras 3, but `transformers`' TF model c
 - [ ] Deploy as a live demo (Streamlit/Gradio on Hugging Face Spaces) so recruiters can try it directly
 - [ ] Add a `/predict` API endpoint (FastAPI)
 - [ ] Add the results table above with real numbers
-- [ ] Address class imbalance more rigorously (e.g. SMOTE) and compare against the `class_weight` approach
-
-## 📄 License
-
-[Add a license, e.g. MIT]
-
+- [ ] Address class imbalance more rigorously (e.g. SMOTE) and compare against the `class_weight` approac
 ---
 
 *Part of my BCA Hons in AI portfolio.*
