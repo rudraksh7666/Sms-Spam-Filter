@@ -15,7 +15,7 @@ Spam-filter projects usually stop at one Naive Bayes model. This one goes furthe
 - **Key columns used:**
   - `Message` — raw SMS text
   - `spamORham` — original label (`spam` / `ham`)
-  - `message_clean` — cleaned, stopword-removed, stemmed text (used by the classical ML and GloVe/LSTM models)
+  - `message_clean` — cleaned, stopword-removed, stemmed text
   - `target_encoded` — label encoded to 0/1
 
 ## 🧠 Approaches
@@ -27,16 +27,6 @@ Spam-filter projects usually stop at one Naive Bayes model. This one goes furthe
 | BERT (`bert-base-uncased`) | `Message` (raw text) | Fine-tuned transformer — higher expected accuracy, higher compute cost |
 
 **Why BERT uses raw text instead of `message_clean`:** BERT does its own subword tokenization and is trained on natural language, so stemming and stopword removal — which helps a bag-of-words model — actually throws away information it relies on.
-
-## 📊 Results
-
-| Model | Accuracy | Precision | Recall | F1-Score |
-|-------|----------|-----------|--------|----------|
-| Multinomial Naive Bayes | _add from notebook's `classification_report`_ | | | |
-| Bi-LSTM + GloVe | | | | |
-| BERT (fine-tuned) | | | | |
-
-> The notebook already prints a `classification_report` and (for LSTM/BERT) learning curves for each model — pull those numbers in here. This table is the single highest-impact addition you can make: it turns "I built three models" into "here's what I learned by comparing them," which is what actually gets noticed.
 
 ## 📓 Notebook Structure
 
