@@ -80,12 +80,4 @@ Modern TensorFlow's `tf.keras` points to Keras 3, but `transformers`' TF model c
 - The dataset is imbalanced (~87% ham / 13% spam). `train_test_split(..., stratify=...)` preserves that ratio between splits; if a model biases toward predicting "ham", `class_weight` in `.fit()` is the usual fix.
 - BERT fine-tuning uses a small learning rate (`2e-5`) and few epochs (`3`), since it converges quickly and overfits fast on a dataset this size (~5.5k messages).
 
-## 🔮 Future Improvements
-
-- [ ] Deploy as a live demo (Streamlit/Gradio on Hugging Face Spaces) so recruiters can try it directly
-- [ ] Add a `/predict` API endpoint (FastAPI)
-- [ ] Add the results table above with real numbers
-- [ ] Address class imbalance more rigorously (e.g. SMOTE) and compare against the `class_weight` approac
----
-
 *Part of my BCA Hons in AI portfolio.*
